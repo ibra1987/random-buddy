@@ -1,103 +1,126 @@
-import Image from "next/image";
+import { Metadata } from "next";
+import { Wand2, MapPin, Smile, Type, Ghost, Swords, Users, Crown } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "RandomBuddy | Free Random Generators",
+  description:
+    "RandomBuddy is your vintage-style hub for random generators: fantasy names, cities, emojis, usernames, scary text, and more!",
+  keywords: [
+    "random generators",
+    "fantasy name generator",
+    "random city generator",
+    "fake names",
+    "emoji generator",
+    "scary text generator",
+    "username generator",
+    "Randombuddy",
+  ],
+};
+
+const generatorGroups = [
+  {
+    title: "🌍 Places & Cities",
+    icon: <MapPin className="w-6 h-6 text-yellow-800" />,
+    description:
+      "Discover random cities, towns, kingdoms, and fantasy places. Perfect for travelers, writers, and gamers.",
+    generators: [
+      "Random City Generator",
+      "Fantasy Town Name Generator",
+      "Fantasy Kingdom Name Generator",
+    ],
+  },
+  {
+    title: "🧙‍♂️ Fantasy & RPG",
+    icon: <Swords className="w-6 h-6 text-green-800" />,
+    description:
+      "Get unique fantasy character names, D&D aliases, and villain names for your stories and games.",
+    generators: [
+      "Fantasy Name Generator",
+      "Fantasy Last Name Generator",
+      "Fantasy Surnames Generator",
+      "Elf Name Generator",
+      "D&D Name Generator",
+      "Villain Name Generator",
+    ],
+  },
+  {
+    title: "😀 Fun & Social",
+    icon: <Smile className="w-6 h-6 text-pink-700" />,
+    description:
+      "Generate random emojis, Instagram usernames, and anime nicknames instantly.",
+    generators: [
+      "Random Emoji Generator",
+      "IG Username Generator",
+      "Anime Nickname Generator",
+    ],
+  },
+  {
+    title: "✍️ Words & Text",
+    icon: <Type className="w-6 h-6 text-blue-800" />,
+    description:
+      "Play with text: backward words, scary texts, fake names, and cursive styles.",
+    generators: [
+      "Backward Word Generator",
+      "Scary Text Generator",
+      "Fake Name Generator",
+      "Name in Cursive Generator",
+      "Surname Generator",
+    ],
+  },
+  {
+    title: "🎲 Miscellaneous",
+    icon: <Wand2 className="w-6 h-6 text-purple-700" />,
+    description:
+      "Generate random strings and unique creative ideas instantly.",
+    generators: ["Random String Generator"],
+  },
+];
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen  text-gray-800">
+      {/* Hero Section */}
+      <section className="text-center py-16 bg-[#e6d9c9] shadow-md border-b border-gray-300">
+        <h1 className="text-5xl font-bold mb-4 tracking-tight text-[#5a4631]">
+          ✨ RandomBuddy
+        </h1>
+        <p className="text-lg max-w-2xl mx-auto text-[#6b5a4d]">
+          Your vintage-style hub for <strong>fun random generators</strong>.
+          Explore fantasy names, cities, emojis, usernames, and more!
+        </p>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      {/* Generators Section */}
+      <section className="max-w-6xl mx-auto px-4 py-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {generatorGroups.map((group) => (
+          <div
+            key={group.title}
+            className="bg-[#fef8f2] p-6 rounded-2xl shadow-lg border border-[#d1c3b0] hover:scale-[1.03] transition-transform"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+            <div className="flex items-center gap-3 mb-4">
+              {group.icon}
+              <h2 className="text-xl font-semibold text-[#5a4631]">{group.title}</h2>
+            </div>
+            <p className="text-sm text-[#6b5a4d] mb-4">{group.description}</p>
+            <ul className="space-y-2">
+              {group.generators.map((gen) => (
+                <li
+                  key={gen}
+                  className="flex items-center gap-2 text-[#5a4631] hover:text-[#7b5e42] cursor-pointer"
+                >
+                  <Ghost className="w-4 h-4 text-[#b3a18b]" />
+                  {gen}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center py-6 border-t border-gray-300 text-sm text-[#6b5a4d]">
+        © {new Date().getFullYear()} RandomBuddy — All Rights Reserved.
       </footer>
-    </div>
+    </main>
   );
 }
