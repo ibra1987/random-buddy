@@ -21,7 +21,7 @@ export default function ScaryTextGenerator() {
 
 
   return (
-    <div className="min-h-screen  flex flex-col items-center space-y-6 ">
+    <div className="min-h-screen  flex flex-col items-center space-y-6 pt-10 ">
       {/* Header */}
       <div className="flex  items-center gap-3 mb-6">
         <Skull size={36} className="text-red-500" />

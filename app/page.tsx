@@ -80,7 +80,7 @@ export default function Home() {
   return (
     <main className="min-h-screen  text-gray-800">
       {/* Hero Section */}
-      <section className="text-center py-16 bg-[#e6d9c9] shadow-md border-b border-gray-300">
+      <section className="text-center py-20">
         <h1 className="text-5xl font-bold mb-4 tracking-tight text-[#5a4631]">
           ✨ RandomBuddy
         </h1>

@@ -1,0 +1,26 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="300"
+  height="60"
+  viewBox="0 0 300 60"
+>
+  <!-- Background circle / icon -->
+  <circle cx="30" cy="30" r="25" fill="#f6f0e6" stroke="#5b4636" stroke-width="2" />
+
+  <!-- Buddy face -->
+  <circle cx="30" cy="30" r="15" fill="#e6d9c9" stroke="#5b4636" stroke-width="1.5" />
+  <circle cx="22" cy="28" r="2" fill="#5b4636" />
+  <circle cx="38" cy="28" r="2" fill="#5b4636" />
+  <path
+    d="M22 36 Q30 42 38 36"
+    stroke="#5b4636"
+    stroke-width="2"
+    fill="transparent"
+    stroke-linecap="round"
+  />
+
+  <!-- Text -->
+  <text x="70" y="38" font-family="'Georgia', serif" font-size="28" fill="#5b4636" font-weight="bold">
+    RandomBuddy
+  </text>
+</svg>
