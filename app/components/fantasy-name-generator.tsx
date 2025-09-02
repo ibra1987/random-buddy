@@ -139,21 +139,10 @@ const handleGenerate = () => {
   }
 
   return (
-    <main className={`${PANEL_BG} text-black min-h-screen`}>
-      <div className="max-w-5xl mx-auto px-6 py-10">
+    <main className={`w-full ${PANEL_BG} text-black min-h-screen`}>
+      <div className="max-w-5xl mx-auto  py-10">
         {/* Header */}
-        <header className={`mb-8 p-6 ${VINTAGE_CARD} ${CARD_BG}`}>
-          <div className="flex items-center gap-3">
-            <Wand2 className="w-6 h-6" />
-            <h1 className="text-2xl md:text-3xl font-bold tracking-wide">
-              Fantasy Name Generator (Vintage Edition)
-            </h1>
-          </div>
-          <p className="mt-2 text-black/70">
-            Personalize names for characters, cities, kingdoms, creatures, clans, weapons, and spells.
-            Fine-tune style, tone, length, language inspiration, role, race, and setting.
-          </p>
-        </header>
+        
 
         {/* Advanced Prompts Form */}
         <section className={`p-6 ${VINTAGE_CARD} ${CARD_BG}`}>

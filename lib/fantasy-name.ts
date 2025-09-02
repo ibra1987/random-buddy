@@ -188,3 +188,4 @@ export function generateFantasyName(opts: Options = {}): string {
 
   return name;
 }
+
