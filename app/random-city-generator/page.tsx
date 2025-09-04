@@ -135,9 +135,7 @@ export default function RandomCityGenerator() {
               <div>
                 <h3 className="text-xl font-semibold text-black mb-4">How It Works</h3>
                 <p className="text-black leading-relaxed">
-                  Our platform integrates with DeepSeek API to fetch accurate and engaging information about 
-                  cities worldwide. Each time you click "Discover Another City", our system generates a new 
-                  urban destination with key details including population, famous landmarks, and cultural highlights.
+                  {"Our platform integrates with DeepSeek API to fetch accurate and engaging information about cities worldwide. Each time you click 'Discover Another City', our system generates a new urban destination with key details including population, famous landmarks, and cultural highlights."}
                 </p>
               </div>
             </div>
@@ -172,22 +170,19 @@ export default function RandomCityGenerator() {
               <div className="bg-[#f6f0e6] p-6 rounded-xl border border-[#d4c6b3]">
                 <h3 className="text-xl font-semibold text-black mb-3">How are the cities selected?</h3>
                 <p className="text-black">
-                  Our system uses DeepSeek API to randomly select from a database of thousands of cities worldwide, 
-                  ensuring a diverse and interesting selection each time.
+                  {"Our system uses DeepSeek API to randomly select from a database of thousands of cities worldwide, ensuring a diverse and interesting selection each time."}
                 </p>
               </div>
               <div className="bg-[#f6f0e6] p-6 rounded-xl border border-[#d4c6b3]">
                 <h3 className="text-xl font-semibold text-black mb-3">Is the information accurate?</h3>
                 <p className="text-black">
-                  Yes, we source our data from reliable geographical databases and use AI to present it in an engaging, 
-                  informative way. Population figures and landmarks are verified for accuracy.
+                 {" Yes, we source our data from reliable geographical databases and use AI to present it in an engaging, informative way. Population figures and landmarks are verified for accuracy."}
                 </p>
               </div>
               <div className="bg-[#f6f0e6] p-6 rounded-xl border border-[#d4c6b3]">
                 <h3 className="text-xl font-semibold text-black mb-3">Can I request specific cities?</h3>
                 <p className="text-black">
-                  Currently, our explorer randomly selects cities to ensure diversity. However, we're working on a feature 
-                  that will allow users to search for specific destinations.
+                  {"Currently, our explorer randomly selects cities to ensure diversity. However, we're working on a feature that will allow users to search for specific destinations."}
                 </p>
               </div>
             </div>
@@ -195,13 +190,7 @@ export default function RandomCityGenerator() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-[#e6d9c9] py-8 px-6 text-center border-t border-[#d4c6b3] mt-16">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-black mb-4">Powered by DeepSeek API • Vintage City Explorer</p>
-          <p className="text-gray-700">© {new Date().getFullYear()} Vintage City Explorer. All rights reserved.</p>
-        </div>
-      </footer>
+    
 
       <style jsx global>{`
         @keyframes fadeIn {

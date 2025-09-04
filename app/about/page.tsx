@@ -70,9 +70,8 @@ export default function About() {
           Our Mission 🎯
         </h2>
         <p className="text-[#6b5a4d] text-lg leading-relaxed">
-          RandomBuddy is here to make creativity effortless.  
-          No complicated setups. No sign-ups. Just click, generate, and have fun.  
-          We focus on keeping everything <strong>simple, vintage, and delightful</strong>.
+         {" RandomBuddy is here to make creativity effortless. No complicated setups. No sign-ups. Just click, generate, and have fun. We focus on keeping everything"} <strong>simple, vintage, and delightful</strong>.
+         
         </p>
       </section>
 
