@@ -23,6 +23,29 @@ export type Role = "none" | "hero" | "villain" | "mage" | "warrior" | "king" | "
 export type Race = "none" | "human" | "elf" | "dwarf" | "orc" | "dragon" | "fairy" | "undead";
 export type Setting = "none" | "medieval" | "futuristic" | "steampunk" | "mythological";
 
+export type TeamStyle = "heroic" | "dark" | "mystical" | "royal" | "funny" | "epic";
+export type Theme =
+  | "dragons"
+  | "knights"
+  | "magic"
+  | "realms"
+  | "assassins"
+  | "guardians"
+  | "undead"
+  | "beasts"
+  | "custom";
+
+// Options for name generation
+export interface FantasyNameOptions {
+  nameType: "clan" | "team" | "guild";
+  style: TeamStyle;
+  tone?: TeamStyle;
+  startsWith?: string;
+  includeSyl?: string;
+  avoidSyl?: string;
+  setting?: string;
+}
+
 
 //structured data types
 // types/schema.ts

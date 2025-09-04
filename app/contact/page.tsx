@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import ContactForm from "../components/contact-form";
-import FeaturesSection from "../components/features";
 import PageSchema from "../components/structured-data/page-schema";
 
 export const metadata: Metadata = {
@@ -23,7 +22,7 @@ export default function Contact() {
         </h1>
         <p className="text-lg max-w-2xl mx-auto text-[#6b5a4d]">
           Got questions, feedback, or feature requests?  
-          We'd love to hear from you!
+          {"We'd love to hear from you!"}
         </p>
       </section>
 

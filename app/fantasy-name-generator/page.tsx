@@ -3,13 +3,9 @@ import { Skull, Ghost, Bug, Flame, Wand2 } from "lucide-react";
 import FantasyNameGenerator from "../components/fantasy-name-generator";
 import FantasyNameGeneratorSections from "../components/fantasy-name-content";
 import PageSchema from "../components/structured-data/page-schema";
+import { CARD_BG, VINTAGE_CARD } from "@/constants";
 
-const VINTAGE_CARD = "rounded-2xl border shadow-sm";
-const CARD_BG = "bg-[#e6d9c9] border-black/10";
-const PANEL_BG = "bg-[#f6f0e6]";
-const BTN = "inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-black/10 hover:border-black/20 active:scale-[0.99] transition";
-const BTN_PRIMARY = `${BTN} bg-black text-white hover:opacity-90`;
-const BTN_SOFT = `${BTN} ${CARD_BG}`;
+
 
 
 export default function FantasyNameGeneratorPage() {

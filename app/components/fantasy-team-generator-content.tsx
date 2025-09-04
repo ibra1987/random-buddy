@@ -48,7 +48,7 @@ const sections = [
       <ul className="list-disc pl-5">
         <li>Keep it short and easy to remember.</li>
         <li>Use alliteration for catchiness.</li>
-        <li>Incorporate your team's theme or lore.</li>
+        <li> {"Incorporate your team's theme or lore."} </li>
       </ul>
     )
   }

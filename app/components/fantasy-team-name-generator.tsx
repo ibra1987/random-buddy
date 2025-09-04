@@ -11,6 +11,8 @@ import {
   RefreshCw,
   Users,
 } from "lucide-react";
+import { FantasyNameOptions, TeamStyle, Theme } from "@/types";
+import { BTN_PRIMARY, BTN_SOFT, CARD_BG, PANEL_BG, styleWords, VINTAGE_CARD } from "@/constants";
 
 /**
  * Fantasy Team Name Generator
@@ -21,37 +23,10 @@ import {
  * border:  rgba(0,0,0,.12)
  */
 
-const VINTAGE_CARD = "rounded-2xl border shadow-sm";
-const CARD_BG = "bg-[#e6d9c9] border-black/10";
-const PANEL_BG = "bg-[#f6f0e6]";
-const BTN =
-  "inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-black/10 hover:border-black/20 active:scale-[0.99] transition";
-const BTN_PRIMARY = `${BTN} bg-black text-white hover:opacity-90`;
-const BTN_SOFT = `${BTN} ${CARD_BG}`;
+
 
 // Types
-type TeamStyle = "heroic" | "dark" | "mystical" | "royal" | "funny" | "epic";
-type Theme =
-  | "dragons"
-  | "knights"
-  | "magic"
-  | "realms"
-  | "assassins"
-  | "guardians"
-  | "undead"
-  | "beasts"
-  | "custom";
 
-// Options for name generation
-interface FantasyNameOptions {
-  nameType: "clan" | "team" | "guild";
-  style: TeamStyle;
-  tone?: TeamStyle;
-  startsWith?: string;
-  includeSyl?: string;
-  avoidSyl?: string;
-  setting?: string;
-}
 
 export default function FantasyTeamNameGenerator() {
   const [teamStyle, setTeamStyle] = useState<TeamStyle>("heroic");
@@ -80,14 +55,7 @@ export default function FantasyTeamNameGenerator() {
     const { style, startsWith = "", includeSyl = "", avoidSyl = "" } = options;
 
     // Base words by style
-    const styleWords: Record<TeamStyle, string[]> = {
-      heroic: ["Valor", "Shield", "Lion", "Blade", "Honor", "Storm"],
-      dark: ["Shadow", "Doom", "Night", "Grim", "Oblivion", "Raven"],
-      mystical: ["Moon", "Star", "Spirit", "Myst", "Rune", "Aura"],
-      royal: ["Crown", "Throne", "Scepter", "Regal", "Kingdom", "Noble"],
-      funny: ["Goofballs", "Silly", "Jesters", "Banana", "Muffins", "Clowns"],
-      epic: ["Dragon", "Phoenix", "Titan", "Hydra", "Vortex", "Inferno"],
-    };
+    
 
     let wordList = styleWords[style];
 

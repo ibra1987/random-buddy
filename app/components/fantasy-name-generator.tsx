@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { generateFantasyName } from "@/lib/fantasy-name";
 import { Gender, Language, Length, NameType, Race, Role, Setting, Style, Tone } from "@/types";
+import { BTN_PRIMARY, BTN_SOFT, CARD_BG, PANEL_BG, VINTAGE_CARD } from "@/constants";
 
 /**
  * Vintage palette
@@ -22,12 +23,6 @@ import { Gender, Language, Length, NameType, Race, Role, Setting, Style, Tone } 
  */
 
 
-const VINTAGE_CARD = "rounded-2xl border shadow-sm";
-const CARD_BG = "bg-[#e6d9c9] border-black/10";
-const PANEL_BG = "bg-[#f6f0e6]";
-const BTN = "inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-black/10 hover:border-black/20 active:scale-[0.99] transition";
-const BTN_PRIMARY = `${BTN} bg-black text-white hover:opacity-90`;
-const BTN_SOFT = `${BTN} ${CARD_BG}`;
 
 export default function FantasyNameGenerator() {
   // Form state

@@ -1,7 +1,7 @@
 "use client";
 import { generateCreepyText } from '@/functions/scary-text-generator';
 import { styleMap } from '@/lib/creepy-letters'
-import { Copy, CopyIcon, Zap } from 'lucide-react'
+import { Copy, Zap } from 'lucide-react'
 import React, { useState } from 'react'
 
 const CreepyTextForm  = () => {

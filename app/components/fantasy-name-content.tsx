@@ -21,8 +21,8 @@ export default function FantasyNameGeneratorSections() {
         </h2>
         <p className="text-gray-700 leading-relaxed">
           Our Fantasy Name Generator uses advanced AI models to craft unique names based on your preferences. 
-          Whether you're creating a hero, a mythical creature, or a kingdom, our tool personalizes results to
-          fit your world perfectly.
+{"  Whether you're creating a hero, a mythical creature, or a kingdom, our tool personalizes results to"}      
+    fit your world perfectly.
         </p>
       </section>
 
