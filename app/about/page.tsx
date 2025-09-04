@@ -28,8 +28,8 @@ export default function About() {
       <section className="max-w-3xl mx-auto px-6 py-12 text-center space-y-6">
         <p className="text-[#5a4631] text-lg leading-relaxed">
           At <strong>RandomBuddy</strong>, we believe randomness can spark creativity.
-          Whether you're brainstorming fantasy character names, looking for
-          a unique Instagram handle, or searching for spooky text effects,
+{" Whether you're brainstorming fantasy character names, looking for"}      
+    a unique Instagram handle, or searching for spooky text effects,
           we make it simple, fun, and free.
         </p>
 

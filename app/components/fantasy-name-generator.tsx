@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Wand2,
   Castle,
@@ -32,7 +32,7 @@ export default function FantasyNameGenerator() {
   const [tone, setTone] = useState<Tone>("mystical");
   const [length, setLength] = useState<Length>("medium");
   const [language, setLanguage] = useState<Language>("none");
-  const [count, setCount] = useState<number>(10);
+  const [_, setCount] = useState<number>(10);
   const [startsWith, setStartsWith] = useState<string>("");
   const [includeSyl, setIncludeSyl] = useState<string>("");
   const [avoidSyl, setAvoidSyl] = useState<string>("");
