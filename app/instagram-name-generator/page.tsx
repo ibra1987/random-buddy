@@ -2,6 +2,7 @@
 import { Metadata } from "next";
 import InstaNameGenerator from "../components/instagram-name-generator";
 import InstagramNameGeneratorContent from "../components/instagram-generator-content";
+import PageSchema from "../components/structured-data/page-schema";
 export const metadata: Metadata = {
   title: "Instagram Name Generator | RandomBuddy",
   description:
@@ -43,6 +44,8 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
+    <>
+    <PageSchema/>
     <main className="min-h-screen bg-[#f6f0e6] px-4 py-10">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-5xl md:text-4xl font-bold text-[#5a4631] text-center mb-6">
@@ -57,6 +60,8 @@ export default function Page() {
       </div>
       <InstagramNameGeneratorContent/>
     </main>
+        </>
+
   );
 }
 

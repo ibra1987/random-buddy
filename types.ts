@@ -22,3 +22,52 @@ export type Language =
 export type Role = "none" | "hero" | "villain" | "mage" | "warrior" | "king" | "assassin";
 export type Race = "none" | "human" | "elf" | "dwarf" | "orc" | "dragon" | "fairy" | "undead";
 export type Setting = "none" | "medieval" | "futuristic" | "steampunk" | "mythological";
+
+
+//structured data types
+// types/schema.ts
+import { WithContext } from "schema-dts";
+
+export type WebsiteSchema = WithContext<{
+  "@type": "WebSite";
+  name: string;
+  url: string;
+  description: string;
+  potentialAction: {
+    "@type": "SearchAction";
+    target: string;
+    "query-input": string;
+  };
+}>;
+
+export type SoftwareApplicationSchema = WithContext<{
+  "@type": "SoftwareApplication";
+  name: string;
+  applicationCategory: string;
+  operatingSystem: string;
+  description: string;
+  url: string;
+  offers: {
+    "@type": "Offer";
+    price: string;
+    priceCurrency: string;
+  };
+}>;
+
+export type AboutPageSchema = WithContext<{
+  "@type": "AboutPage";
+  name: string;
+  description: string;
+}>;
+
+export type ContactPageSchema = WithContext<{
+  "@type": "ContactPage";
+  name: string;
+  description: string;
+}>;
+
+export type SchemaType = 
+  | WebsiteSchema 
+  | SoftwareApplicationSchema 
+  | AboutPageSchema 
+  | ContactPageSchema;

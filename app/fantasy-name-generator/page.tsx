@@ -2,6 +2,7 @@
 import { Skull, Ghost, Bug, Flame, Wand2 } from "lucide-react";
 import FantasyNameGenerator from "../components/fantasy-name-generator";
 import FantasyNameGeneratorSections from "../components/fantasy-name-content";
+import PageSchema from "../components/structured-data/page-schema";
 
 const VINTAGE_CARD = "rounded-2xl border shadow-sm";
 const CARD_BG = "bg-[#e6d9c9] border-black/10";
@@ -15,6 +16,8 @@ export default function FantasyNameGeneratorPage() {
 
 
   return (
+    <>
+     <PageSchema/>
     <div className="min-h-screen  flex flex-col items-center space-y-6 pt-10 ">
       {/* Header */}
       <div className="flex  items-center gap-3 mb-6">
@@ -46,5 +49,7 @@ export default function FantasyNameGeneratorPage() {
         <Flame size={18} className="text-red-600" />
       </div>
     </div>
+    </>
+
   );
 }

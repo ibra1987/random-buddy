@@ -1,5 +1,6 @@
 
 import { Metadata } from "next";
+import PageSchema from "../components/structured-data/page-schema";
 
 export const metadata: Metadata = {
   title: "About | RandomBuddy",
@@ -9,6 +10,8 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
+    <>
+    <PageSchema/>
     <main className="min-h-screen max-w-6xl mx-auto  text-gray-800">
       {/* Hero Section */}
       <section className="text-center py-16 px-4 border-b border-[#e0d5c5]">
@@ -78,5 +81,7 @@ export default function About() {
         © {new Date().getFullYear()} RandomBuddy — All Rights Reserved.
       </footer>
     </main>
+        </>
+
   );
 }

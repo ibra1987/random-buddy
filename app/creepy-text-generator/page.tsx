@@ -2,6 +2,7 @@
 import { Skull, Ghost, Bug, Flame } from "lucide-react";
 import ScaryTextForm from "../components/creepy-text-form";
 import StyleDefinitions from "../components/text-style-definitions";
+import PageSchema from "../components/structured-data/page-schema";
 
 // // --- Scary Text Maps ---
 // const scaryMaps: Record<string, (text: string) => string> = {
@@ -21,6 +22,10 @@ export default function ScaryTextGenerator() {
 
 
   return (
+    <>
+          <PageSchema />
+
+   
     <div className="min-h-screen  flex flex-col items-center space-y-6 pt-10 ">
       {/* Header */}
       <div className="flex  items-center gap-3 mb-6">
@@ -38,5 +43,6 @@ export default function ScaryTextGenerator() {
         <Flame size={18} className="text-red-600" />
       </div>
     </div>
+     </>
   );
 }

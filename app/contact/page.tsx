@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import ContactForm from "../components/contact-form";
 import FeaturesSection from "../components/features";
+import PageSchema from "../components/structured-data/page-schema";
 
 export const metadata: Metadata = {
   title: "Contact | RandomBuddy",
@@ -10,6 +11,10 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
+
+    <>
+    <PageSchema/>
+    
     <main className="min-h-screen max-w-6xl mx-auto text-gray-800">
       {/* Hero Section */}
       <section className="text-center py-16 px-4 border-b border-[#e0d5c5]">
@@ -39,5 +44,7 @@ export default function Contact() {
       </section>
 
     </main>
+        </>
+
   );
 }
