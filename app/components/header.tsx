@@ -21,17 +21,12 @@ export default function Header() {
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             <Link
-              href="/fantasy-name-generator"
+              href="/contact"
               className="text-black hover:text-[#5b4636] font-medium transition-colors"
             >
-              Fantasy Name Generator
+              Contact
             </Link>
-            <Link
-              href="/tools"
-              className="text-black hover:text-[#5b4636] font-medium transition-colors"
-            >
-              Tools
-            </Link>
+           
             <Link
               href="/blog"
               className="text-black hover:text-[#5b4636] font-medium transition-colors"

@@ -11,6 +11,7 @@ import {
   RefreshCw,
 } from "lucide-react";
 import { generateFantasyName } from "@/lib/fantasy-name";
+import { Gender, Language, Length, NameType, Race, Role, Setting, Style, Tone } from "@/types";
 
 /**
  * Vintage palette
@@ -20,29 +21,6 @@ import { generateFantasyName } from "@/lib/fantasy-name";
  * border:  rgba(0,0,0,.12)
  */
 
-type NameType = "character" | "city" | "kingdom" | "creature" | "clan" | "weapon" | "spell";
-type Gender = "male" | "female" | "neutral";
-type Style =
-  | "elvish"
-  | "dwarvish"
-  | "orcish"
-  | "ancient-kingdom"
-  | "dark-fantasy"
-  | "magical";
-type Tone = "light" | "dark" | "mystical" | "royal" | "heroic" | "evil" | "cute" | "funny";
-type Length = "short" | "medium" | "long";
-type Language =
-  | "none"
-  | "latin"
-  | "arabic"
-  | "japanese"
-  | "nordic"
-  | "celtic"
-  | "slavic"
-  | "greek";
-type Role = "none" | "hero" | "villain" | "mage" | "warrior" | "king" | "assassin";
-type Race = "none" | "human" | "elf" | "dwarf" | "orc" | "dragon" | "fairy" | "undead";
-type Setting = "none" | "medieval" | "futuristic" | "steampunk" | "mythological";
 
 const VINTAGE_CARD = "rounded-2xl border shadow-sm";
 const CARD_BG = "bg-[#e6d9c9] border-black/10";

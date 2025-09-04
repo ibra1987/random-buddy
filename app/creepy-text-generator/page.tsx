@@ -1,6 +1,6 @@
 
 import { Skull, Ghost, Bug, Flame } from "lucide-react";
-import ScaryTextForm from "../components/scary-text-form";
+import ScaryTextForm from "../components/creepy-text-form";
 import StyleDefinitions from "../components/text-style-definitions";
 
 // // --- Scary Text Maps ---

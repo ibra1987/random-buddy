@@ -1,115 +1,94 @@
 import { Metadata } from "next";
-import { Wand2, MapPin, Smile, Type, Ghost, Swords, Users, Crown } from "lucide-react";
+import {
+  Wand2,
+  Users,
+  Swords,
+  Ghost,
+} from "lucide-react";
+import Link from "next/link";
+import FeaturesSection from "./components/features";
+import FaqSection from "./components/faq-section";
 
 export const metadata: Metadata = {
-  title: "RandomBuddy | Free Random Generators",
+  title: "RandomBuddy | Free Fun Name & Text Generators",
   description:
-    "RandomBuddy is your vintage-style hub for random generators: fantasy names, cities, emojis, usernames, scary text, and more!",
+    "RandomBuddy is your go-to hub for fun random generators: Instagram usernames, fantasy names, team names, creepy text, and names wheel picker.",
   keywords: [
     "random generators",
+    "instagram name generator",
     "fantasy name generator",
-    "random city generator",
-    "fake names",
-    "emoji generator",
-    "scary text generator",
-    "username generator",
-    "Randombuddy",
+    "fantasy team name generator",
+    "creepy text generator",
+    "names wheel picker",
+    "RandomBuddy",
   ],
 };
 
 const generatorGroups = [
   {
-    title: "🌍 Places & Cities",
-    icon: <MapPin className="w-6 h-6 text-yellow-800" />,
-    description:
-      "Discover random cities, towns, kingdoms, and fantasy places. Perfect for travelers, writers, and gamers.",
-    generators: [
-      "Random City Generator",
-      "Fantasy Town Name Generator",
-      "Fantasy Kingdom Name Generator",
-    ],
+    title: "🎭 Social & Instagram",
+    icon: <Users className="w-6 h-6 text-pink-700" />,
+    description: "Create unique and trendy Instagram usernames instantly.",
+    generators: [{name: "Instagram Name Generator", link: "/instagram-name-generator"}],
   },
   {
     title: "🧙‍♂️ Fantasy & RPG",
-    icon: <Swords className="w-6 h-6 text-green-800" />,
+    icon: <Swords className="w-6 h-6 text-green-700" />,
     description:
-      "Get unique fantasy character names, D&D aliases, and villain names for your stories and games.",
+      "Generate cool fantasy character names, RPG aliases, and creative team names for your games and stories.",
     generators: [
-      "Fantasy Name Generator",
-      "Fantasy Last Name Generator",
-      "Fantasy Surnames Generator",
-      "Elf Name Generator",
-      "D&D Name Generator",
-      "Villain Name Generator",
+      {name: "Fantasy Name Generator", link: "/fantasy-name-generator"},
+      {name: "Fantasy Team Name Generator", link: "/fantasy-team-name-generator"},
     ],
   },
   {
-    title: "😀 Fun & Social",
-    icon: <Smile className="w-6 h-6 text-pink-700" />,
-    description:
-      "Generate random emojis, Instagram usernames, and anime nicknames instantly.",
-    generators: [
-      "Random Emoji Generator",
-      "IG Username Generator",
-      "Anime Nickname Generator",
-    ],
-  },
-  {
-    title: "✍️ Words & Text",
-    icon: <Type className="w-6 h-6 text-blue-800" />,
-    description:
-      "Play with text: backward words, scary texts, fake names, and cursive styles.",
-    generators: [
-      "Backward Word Generator",
-      "Scary Text Generator",
-      "Fake Name Generator",
-      "Name in Cursive Generator",
-      "Surname Generator",
-    ],
-  },
-  {
-    title: "🎲 Miscellaneous",
+    title: "🎡 Names Wheel Picker",
     icon: <Wand2 className="w-6 h-6 text-purple-700" />,
-    description:
-      "Generate random strings and unique creative ideas instantly.",
-    generators: ["Random String Generator"],
+    description: "Spin the wheel and randomly pick a name — fun and fast!",
+    generators: [{name: "Names Wheel Picker", link: "/random-names-wheel-picker"}],
+  },
+  {
+    title: "👻 Creepy & Fun Text",
+    icon: <Ghost className="w-6 h-6 text-red-700" />,
+    description: "Make your text look spooky, creepy, or cursed instantly.",
+    generators: [{name: "Creepy Text Generator", link: "/creepy-text-generator"}],
   },
 ];
 
 export default function Home() {
   return (
-    <main className="min-h-screen  text-gray-800">
+    <main className="min-h-screen text-gray-800 bg-[#fffdf9]">
       {/* Hero Section */}
-      <section className="text-center py-20">
+      <section className="text-center py-16">
         <h1 className="text-5xl font-bold mb-4 tracking-tight text-[#5a4631]">
           ✨ RandomBuddy
         </h1>
         <p className="text-lg max-w-2xl mx-auto text-[#6b5a4d]">
-          Your vintage-style hub for <strong>fun random generators</strong>.
-          Explore fantasy names, cities, emojis, usernames, and more!
+          Your go-to hub for <strong>fun random generators</strong> — create usernames, fantasy names, team names, creepy text, and more!
         </p>
       </section>
 
       {/* Generators Section */}
-      <section className="max-w-6xl mx-auto px-4 py-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <section className="max-w-5xl mx-auto px-4 pb-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {generatorGroups.map((group) => (
           <div
             key={group.title}
-            className="bg-[#fef8f2] p-6 rounded-2xl shadow-lg border border-[#d1c3b0] hover:scale-[1.03] transition-transform"
+            className="bg-[#fef8f2] p-6 rounded-2xl shadow-lg border-2 border-[#e0d5c5] hover:border-[#a59274] transition-transform"
           >
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-3">
               {group.icon}
-              <h2 className="text-xl font-semibold text-[#5a4631]">{group.title}</h2>
+              <h2 className="text-xl font-semibold text-[#5a4631]">
+                {group.title}
+              </h2>
             </div>
             <p className="text-sm text-[#6b5a4d] mb-4">{group.description}</p>
             <ul className="space-y-2">
               {group.generators.map((gen) => (
                 <li
-                  key={gen}
+                  key={gen.name}
                   className="flex items-center gap-2 text-[#5a4631] hover:text-[#7b5e42] cursor-pointer"
                 >
-                  <Ghost className="w-4 h-4 text-[#b3a18b]" />
-                  {gen}
+                  • <Link href={gen.link} className="underline">{gen.name}</Link>
                 </li>
               ))}
             </ul>
@@ -117,10 +96,9 @@ export default function Home() {
         ))}
       </section>
 
-      {/* Footer */}
-      <footer className="text-center py-6 border-t border-gray-300 text-sm text-[#6b5a4d]">
-        © {new Date().getFullYear()} RandomBuddy — All Rights Reserved.
-      </footer>
+          <FeaturesSection/>
+          <FaqSection/>
+
     </main>
   );
 }

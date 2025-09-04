@@ -4,7 +4,7 @@ import { styleMap } from '@/lib/creepy-letters'
 import { Copy, CopyIcon, Zap } from 'lucide-react'
 import React, { useState } from 'react'
 
-const ScaryTextForm = () => {
+const CreepyTextForm  = () => {
       const [input, setInput] = useState("");
       const [copiedOutput, setCopiedOutput] = useState(false);
 
@@ -87,4 +87,4 @@ const ScaryTextForm = () => {
   )
 }
 
-export default ScaryTextForm
+export default CreepyTextForm

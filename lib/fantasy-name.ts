@@ -1,34 +1,5 @@
-type NameType = "character" | "city" | "kingdom" | "creature" | "clan" | "weapon" | "spell";
-type Gender = "male" | "female" | "neutral";
-type Style =
-  | "elvish"
-  | "dwarvish"
-  | "orcish"
-  | "ancient-kingdom"
-  | "dark-fantasy"
-  | "magical";
-type Tone =
-  | "light"
-  | "dark"
-  | "mystical"
-  | "royal"
-  | "heroic"
-  | "evil"
-  | "cute"
-  | "funny";
-type Length = "short" | "medium" | "long";
-type Language =
-  | "none"
-  | "latin"
-  | "arabic"
-  | "japanese"
-  | "nordic"
-  | "celtic"
-  | "slavic"
-  | "greek";
-type Role = "none" | "hero" | "villain" | "mage" | "warrior" | "king" | "assassin";
-type Race = "none" | "human" | "elf" | "dwarf" | "orc" | "dragon" | "fairy" | "undead";
-type Setting = "none" | "medieval" | "futuristic" | "steampunk" | "mythological";
+import { Gender, Language, Length, NameType, Race, Role, Setting, Style, Tone } from "@/types";
+
 
 type Options = Partial<{
   nameType: NameType;
