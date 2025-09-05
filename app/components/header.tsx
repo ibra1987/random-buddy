@@ -27,12 +27,12 @@ export default function Header() {
               Contact
             </Link>
            
-            <Link
+            {/* <Link
               href="/blog"
               className="text-black hover:text-[#5b4636] font-medium transition-colors"
             >
               Blog
-            </Link>
+            </Link> */}
             <Link
               href="/about"
               className="text-black hover:text-[#5b4636] font-medium transition-colors"
