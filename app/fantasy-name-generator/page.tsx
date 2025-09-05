@@ -6,7 +6,39 @@ import PageSchema from "../components/structured-data/page-schema";
 import { CARD_BG, VINTAGE_CARD } from "@/constants";
 
 
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Fantasy Name Generator - Create Unique Character & World Names | RandomBuddy',
+  description: 'Generate unique fantasy names for characters, cities, kingdoms, creatures, clans, weapons, and spells. Customize style, tone, length, and language inspiration for your fantasy world.',
+  keywords: 'fantasy name generator, character names, fantasy names, RPG names, D&D names, world building, kingdom names, creature names, fantasy city names, vintage names',
+  openGraph: {
+    title: 'Fantasy Name Generator - Create Unique Character & World Names | RandomBuddy',
+    description: 'Generate unique fantasy names for characters, cities, kingdoms, creatures, and more. Customize style, tone, and language inspiration.',
+    url: 'https://randombuddy.com/fantasy-name-generator',
+    siteName: 'RandomBuddy',
+    images: [
+      {
+        url: '/og-fantasy-names.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Fantasy Name Generator - Create Unique Character & World Names',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fantasy Name Generator - Create Unique Character & World Names | RandomBuddy',
+    description: 'Generate unique fantasy names for characters, cities, kingdoms, creatures, and more with customizable options.',
+    images: ['/og-fantasy-names.jpg'],
+  },
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://randombuddy.com/fantasy-name-generator',
+  },
+};
 
 export default function FantasyNameGeneratorPage() {
 

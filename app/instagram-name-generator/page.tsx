@@ -41,7 +41,54 @@ export const metadata: Metadata = {
     creator: "@randombuddy",
   },
 };
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Instagram Name Generator - Cool & Aesthetic Usernames | RandomBuddy",
+  description:
+    "Generate cool, aesthetic, and unique Instagram usernames instantly. Find catchy nicknames for influencers, gamers, creators, and social media profiles. Free online tool.",
+  keywords: [
+    "instagram name generator",
+    "instagram username generator",
+    "cool instagram names",
+    "aesthetic instagram usernames",
+    "unique instagram handles",
+    "social media names",
+    "username ideas",
+    "influencer names",
+    "creator usernames",
+    "randombuddy"
+  ],
+  openGraph: {
+    title: "Instagram Name Generator - Cool & Aesthetic Usernames | RandomBuddy",
+    description:
+      "Generate cool, aesthetic, and unique Instagram usernames instantly. Perfect for influencers, creators, and social media profiles.",
+    url: "https://randombuddy.com/instagram-name-generator",
+    siteName: "RandomBuddy",
+    images: [
+      {
+        url: "/og-instagram-generator.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Instagram Name Generator - Create Cool & Aesthetic Usernames",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Instagram Name Generator - Cool & Aesthetic Usernames | RandomBuddy",
+    description:
+      "Generate cool, aesthetic, and unique Instagram usernames instantly. Perfect for influencers, creators, and social media profiles.",
+    images: ["/og-instagram-generator.jpg"],
+    creator: "@randombuddy",
+  },
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://randombuddy.com/instagram-name-generator",
+  },
+};
 export default function Page() {
   return (
     <>

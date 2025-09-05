@@ -3,6 +3,7 @@ import { Skull, Ghost, Bug, Flame } from "lucide-react";
 import ScaryTextForm from "../components/creepy-text-form";
 import StyleDefinitions from "../components/text-style-definitions";
 import PageSchema from "../components/structured-data/page-schema";
+import { Metadata } from "next";
 
 // // --- Scary Text Maps ---
 // const scaryMaps: Record<string, (text: string) => string> = {
@@ -17,6 +18,39 @@ import PageSchema from "../components/structured-data/page-schema";
 //   glitchy: (t) => t.split("").map((c, i) => (i % 2 ? c.toUpperCase() : c.toLowerCase())).join(""),
 //   runic: (t) => t.replace(/[a-z]/gi, (c) => "ᚱ" + c),
 // };
+
+
+export const metadata: Metadata = {
+  title: 'Creepy Text Generator - Spooky & Scary Text Styles | RandomBuddy',
+  description: 'Generate creepy, scary, and spooky text styles for Halloween, horror stories, social media, and more. Free online creepy text generator with multiple frightening styles.',
+  keywords: 'creepy text, scary text, spooky text generator, horror text, Halloween text, creepy font, scary font, online text generator',
+  openGraph: {
+    title: 'Creepy Text Generator - Spooky & Scary Text Styles | RandomBuddy',
+    description: 'Generate creepy and scary text styles for Halloween, horror stories, and social media. Free online tool with multiple frightening styles.',
+    url: 'https://randombuddy.com/creepy-text-generator',
+    siteName: 'RandomBuddy',
+    images: [
+      {
+        url: '/og-creepy-text.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Creepy Text Generator - Create Spooky Text Styles',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Creepy Text Generator - Spooky & Scary Text Styles | RandomBuddy',
+    description: 'Generate creepy and scary text styles for Halloween, horror stories, and social media.',
+    images: ['/og-creepy-text.jpg'],
+  },
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://randombuddy.com/creepy-text-generator',
+  },
+};
 
 export default function ScaryTextGenerator() {
 

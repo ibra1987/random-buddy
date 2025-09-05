@@ -40,7 +40,7 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} RandomBuddy. All rights reserved.</p>
           <p className="mt-2 md:mt-0">
             Made with ❤️ by{" "}
-            <Link href="https://github.com/yourusername" className="text-[#FFB800] hover:underline">
+            <Link href="https://github.com/ibra1987" className="text-[#FFB800] hover:underline">
               Brahim Driouch
             </Link>
           </p>
