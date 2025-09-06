@@ -1,5 +1,4 @@
 
-import { CARD_BG, VINTAGE_CARD } from "@/constants";
 
 export default function GnomeNameGeneratorContent() {
   return (
@@ -27,13 +26,13 @@ export default function GnomeNameGeneratorContent() {
         <h2 className="text-2xl font-bold mb-4">Using Gnome Names in D&D and RPGs</h2>
         <div className=" p-6 rounded-lg ">
           <p className="mb-4">
-            Whether you're playing Dungeons & Dragons, Pathfinder, or other fantasy RPGs, a well-chosen 
+           {" Whether you're playing Dungeons & Dragons, Pathfinder, or other fantasy RPGs, a well-chosen "}
             gnome name can bring your character to life. Our generator provides:
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <h3 className="text-lg font-medium mb-2">Character Identity</h3>
-              <p>The right name helps establish your gnome's personality, background, and place in the world.</p>
+              <p>{"The right name helps establish your gnome's personality, background, and place in the world."}</p>
             </div>
             <div>
               <h3 className="text-lg font-medium mb-2">Clan Connections</h3>
@@ -41,7 +40,7 @@ export default function GnomeNameGeneratorContent() {
             </div>
             <div>
               <h3 className="text-lg font-medium mb-2">Roleplaying Inspiration</h3>
-              <p>Traits and specialties can inspire your character's abilities and story arc.</p>
+              <p>{"Traits and specialties can inspire your character's abilities and story arc."}</p>
             </div>
             <div>
               <h3 className="text-lg font-medium mb-2">World Building</h3>
@@ -79,7 +78,7 @@ export default function GnomeNameGeneratorContent() {
             <p>Yes, all names generated are free to use for both personal and commercial projects. No attribution is required.</p>
           </div>
           <div>
-            <h3 className="text-lg font-medium mb-2">What's the difference between gnomes and other small folk like halflings or dwarves?</h3>
+            <h3 className="text-lg font-medium mb-2">{"What's the difference between gnomes and other small folk like halflings or dwarves?"}</h3>
             <p>While halflings are typically home-loving and dwarves are known for mining and craftsmanship, gnomes are usually characterized by their curiosity, inventiveness, and connection to illusion magic or technology.</p>
           </div>
         </div>
