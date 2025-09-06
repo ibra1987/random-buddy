@@ -20,6 +20,7 @@ export default function PageSchema() {
     
     const toolMap: Record<string, string> = {
       '/fantasy-name-generator': 'Fantasy Name Generator',
+      'gnome-name-generator': 'Gnome Name Generator',
       '/fantasy-team-name-generator': 'Fantasy Team Name Generator',
       '/creepy-name-generator': 'Creepy Name Generator',
       '/instagram-name-generator': 'Instagram Name Generator',

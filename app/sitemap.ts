@@ -6,7 +6,7 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
 
    
-    const routes = ["", "/fantasy-name-generator", "/fantasy-team-name-generator", "/creepy-name-generator", "/instagram-name-generator", "/random-names-wheel-picker",  "/about", "/contact"];
+    const routes = ["","/gnome-name-generator", "/fantasy-name-generator", "/fantasy-team-name-generator", "/creepy-name-generator", "/instagram-name-generator", "/random-names-wheel-picker",  "/about", "/contact"];
 
     return routes.map((route) => ({
       url: `${baseUrl}${route}`,
