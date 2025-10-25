@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 
- export const baseUrl ="https://randombuddy.com"
+ export const baseUrl ="https://www.randombuddy.com"
 
 export default function sitemap(): MetadataRoute.Sitemap {
 
